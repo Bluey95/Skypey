@@ -1,9 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-require('./index.css')
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { Provider } from 'react-redux';
+import AppRoutes from '../src/routes';
 
-const Index = () => {
-  return <div>Hello Sue!</div>;
-};
-
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDOM.render(
+    <AppRoutes />,
+  document.getElementById('root')
+);
