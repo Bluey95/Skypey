@@ -59,5 +59,9 @@
     "plugins": [
       "@babel/plugin-proposal-class-properties"
     ]
+  },
+  "engines": {
+    "npm": "6.4.1",
+    "node": "11.3.0"
   }
 }
