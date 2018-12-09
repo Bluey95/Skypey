@@ -1,5 +1,6 @@
-import { combineReducers } from 'redux';
-
-export default combineReducers({
-  
-});
+export default(state) => {
+    state = { 
+        tech : "React"
+      }
+    return state
+}
