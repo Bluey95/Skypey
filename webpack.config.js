@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const htmlPlugin = new HtmlWebPackPlugin({
+const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
   filename: "./index.html"
 });
@@ -14,8 +14,18 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      {
+        test: /(\.css)$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader']
+    },
+    {
+        test: /(\.css)$/,
+        include: /node_modules/,
+        use: ['style-loader', 'css-loader']
+    }
     ]
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlWebpackPlugin]
 };
