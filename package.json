@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "a messagin app",
   "main": "index.js",
+  "engines": {
+    "node": "11.3.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "test": "npm test",
     "start": "webpack-dev-server --mode development --open",
