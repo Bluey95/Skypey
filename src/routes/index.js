@@ -5,11 +5,9 @@ import App from '../Components/App';
 const AppRoutes = () => {
   return (
     <BrowserRouter>
-      <div>
         <Switch>
           <Route exact path="/" component={App} />
         </Switch>
-      </div>
     </BrowserRouter>
   );
 };

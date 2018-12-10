@@ -7,7 +7,7 @@ body {
   font-weight: 400;
 }
 #root {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,4 +41,11 @@ body {
 .hello-world__tech {
   font-weight: 700;
   font-style: italic;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  color: rgba(189, 189, 192, 1);
+  width: 100%;
 }

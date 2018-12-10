@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import HelloWorld from "../HelloWorld";
-import './index.css';
-import reducer from '../../reducers/RootReducer';
-import { createStore } from "redux"; 
+import Sidebar from '../Sidebar';
+import Main from '../Main';
+import './index.css'
+import React from 'react';
 
-const initialState = { tech: "React " };
-const store = createStore(reducer, initialState); 
 
-class App extends Component {
-render() {
-  return <HelloWorld tech={store.getState().tech}/>
-}
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Sidebar />
+      <Main />
+    </div>
+  );
+};
 
 export default App;
