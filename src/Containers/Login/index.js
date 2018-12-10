@@ -3,12 +3,11 @@ import axios from 'axios';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const API = 'https://stackoverflowlitev3.herokuapp.com/api/v2/auth/registration';
-const title = <h3 className="text-center default-text py-3">Create An Account</h3>
-const login = <h6 className="text-center py-3 login">Already have an account? <a href='./login'>Login Here</a></h6>
-const loginWith = <h6 className="text-center py-3 login">Or login with</h6>
+const API = 'https://stackoverflowlitev3.herokuapp.com/api/v2/auth/login';
+const title = <h3 className="text-center default-text py-3">Welcome Back!!</h3>
+const login = <h6 className="text-center py-3 login">Don't have an account? <a href='./signup'>Signup Here</a></h6>
 
-class Signup extends Component {
+class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -31,16 +30,10 @@ class Signup extends Component {
         const input = form.elements[name];
         values.push(input.value);
       }
-      console.log("getting here")
       const p = {
           "username": values[0],
-          "email": values[1],
-          "password": values[2],
-          "confirmpass": values[3]
+          "password": values[1]
       }
-
-      console.log(JSON.stringify(p))
-
 
     axios({
       method: 'post',
@@ -73,21 +66,15 @@ class Signup extends Component {
                       <input type="text" id="defaultForm-name" name="username" placeholder="username" className="form-control" required />
                   </div>
                   <div className="md-form">
-                      <input type="email" id="defaultForm-email" name="email" placeholder="email" className="form-control" required/>
-                  </div>
-                  <div className="md-form">
                       <input type="password" id="defaultForm-pass" name="password" placeholder="password" className="form-control" required/>
-                  </div>
-                  <div className="md-form">
-                      <input type="password" id="defaultForm-confirmpass" name="confirmpass" placeholder="password" className="form-control" required/>
                   </div>
                   <div>
                     <p className="text-danger">{this.state.errorMessage}</p>
                   </div>
                   <div className="text-center">
-                      <button className="btn submit-button btn-lg waves-effect waves-light">Signup</button>
+                      <button className="btn submit-button btn-lg waves-effect waves-light">Sign in</button>
                   </div>
-                  {login}         
+                  {login}
               </div>
           </div>
         </div>
@@ -97,4 +84,4 @@ class Signup extends Component {
 
 }
 
-export default Signup;
+export default Login;
