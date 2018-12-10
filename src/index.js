@@ -4,6 +4,7 @@ import './index.css';
 import AppRoutes from '../src/routes';
 import registerServiceWorker from "./registerServiceWorker"; 
 import store from './store';
+import 'bootstrap';
 
 const render = () => {
   fancyLog();
